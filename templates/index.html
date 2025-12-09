@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head>
+  <meta charset="utf-8"><title>Weather</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head><body>
+  <h1>Weather Dashboard</h1>
+  <p>Last updated: {{ last_updated or '—' }}</p>
+  <ul>
+    {% for row in rows %}
+      <li><strong>{{ row['name'] }}</strong> — {{ row['temp_c'] or '—' }}°C, {{ row['wind_kph'] or '—' }} kph ({{ row['condition_text'] or 'no data' }})</li>
+    {% endfor %}
+  </ul>
+<button onclick="updateWeather()">Update Weather</button>
+<p id="status" style="color:#555;"></p>
+
+<script>
+function updateWeather() {
+    const s = document.getElementById("status");
+    s.innerText = "Updating…";
+
+    fetch("/admin/sync")
+        .then(r => r.text())
+        .then(() => {
+            s.innerText = "Done! Reloading…";
+            setTimeout(() => location.reload(), 800);
+        })
+        .catch(() => {
+            s.innerText = "Error while updating.";
+        });
+}
+</script>
+</body></html>
