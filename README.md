@@ -10,7 +10,7 @@
 
 •	Public URL showing web page with weather for 2 cities and Last updated time
 
-•	Data persists in MySQL (survives app restarts)
+•	Data persists in SQLite (survives app restarts)
 
 •	App runs as a service, Apache fronts it (reverse proxy)
 
