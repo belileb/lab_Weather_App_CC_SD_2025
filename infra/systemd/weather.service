@@ -1,0 +1,14 @@
+[Unit]
+Description=Weather Flask App
+After=network.target
+
+[Service]
+Type=simple
+User=belileb
+WorkingDirectory=/home/belileb/lab_Weather_App_CC_SD_2025/app
+ExecStart=/usr/bin/python3 /home/belileb/lab_Weather_App_CC_SD_2025/app/app.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
