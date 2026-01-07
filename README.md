@@ -2,6 +2,7 @@ Singidunum University
 AAI – Cloud Computing and Software Development  
 
 lab_Weather_App_CC_SD_2025
+http://20.108.24.219/
 
 • Micro web application using Open-Meteo (https://open-meteo.com/)  
 • Public URL showing weather data for two cities and last update time  
