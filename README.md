@@ -4,6 +4,8 @@ AAI – Cloud Computing and Software Development
 lab_Weather_App_CC_SD_2025  
 Public URL: http://20.108.24.219/
 
+<img width="546" height="337" alt="weather_dashboard" src="https://github.com/user-attachments/assets/4b71c54f-f306-4540-b3c0-80fe92110c93" />
+
 • Micro web application using Open-Meteo (https://open-meteo.com/)  
 • Public web page showing weather data for two cities and last update time  
 • Data persists in SQLite (survives application restarts)  
